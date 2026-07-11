@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ProjectManager - Dashboard</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body onload="getProjects()">
+<nav class="navbar">
+<h1>ProjectManager</h1>
+<div>
+<button onclick="goCreateProject()"><i class="fa-solid fa-plus"></i> Create Project</button>
+<button onclick="logout()" class="danger">Logout</button>
+</div>
+</nav>
+<div class="dashboard-container">
+<div class="stats">
+<div class="stat-card">
+<h3>Projects</h3>
+<h2 id="projectCount">0</h2>
+</div>
+<div class="stat-card">
+<h3>Total Tasks</h3>
+<h2 id="taskCount">0</h2>
+</div>
+<div class="stat-card">
+<h3>Completed</h3>
+<h2 id="doneCount">0</h2>
+</div>
+<div class="stat-card">
+<h3>Overall Progress</h3>
+<h2 id="overallProgress">0%</h2>
+</div>
+</div>
+<div class="search-box">
+<input type="text" id="searchProject" placeholder="Search projects..." onkeyup="searchProjects()">
+</div>
+<div id="projects"></div>
+</div>
+<script src="/static/js/app.js"></script>
+<footer class="footer">
+    <p>Made by <span>Kesava Kakani</span></p>
+</footer>
+</body>
+</html>
