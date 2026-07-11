@@ -75,9 +75,14 @@ function logout(){
     location="/login";
 }
 
-function checkLogin(){
-    if(!getToken())
-        location="/login";
+function checkLogin() {
+    const currentPage = window.location.pathname;
+    if (currentPage === "/login" || currentPage === "/register") {
+        return;
+    }
+    if (!getToken()) {
+        window.location.href = "/login";
+    }
 }
 function createProject(){
     const title=document.getElementById("title").value.trim();
