@@ -3,6 +3,7 @@ import psycopg2
 from flask_bcrypt import Bcrypt
 import jwt
 import datetime
+import os
 
 app=Flask(__name__)
 bcrypt=Bcrypt(app)
@@ -11,9 +12,12 @@ HOST="localhost"
 NAME="project_management"
 USER="postgres"
 PASSWORD="kesava"
-SECRET_KEY="this is my key"
-
+SECRET_KEY = os.environ.get("SECRET_KEY", "this is my key")
+DATABASE_URL = os.environ.get("DATABASE_URL")
 def get_db_connection():
+    if DATABASE_URL:
+        return psycopg2.connect(DATABASE_URL)
+    
     return psycopg2.connect(
         host=HOST,
         database=NAME,
