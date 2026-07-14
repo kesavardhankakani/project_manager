@@ -385,3 +385,31 @@ padding:20px;
     font-weight:500;
     text-shadow:0 0 4px rgba(19, 231, 107, 0.5);
 }
+/* Password Eye Icon */
+
+.password-container{
+    position: relative;
+    width: 100%;
+}
+
+.password-container input{
+    width: 100%;
+    padding: 12px 45px 12px 12px;
+    box-sizing: border-box;
+}
+
+.password-container i{
+
+    position:absolute;
+    top:50%;
+    right:15px;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#666;
+    font-size:18px;
+
+}
+
+.password-container i:hover{
+    color:#007bff;
+}

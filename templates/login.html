@@ -3,6 +3,8 @@
 <title>ProjectManager - Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <div class="container">
@@ -10,7 +12,13 @@
 <h1>ProjectManager</h1>
 <h2>Login</h2>
 <input type="email" id="email" placeholder="Enter Email">
-<input type="password" id="password" placeholder="Enter Password">
+<div class="password-container">
+    <input type="password" id="password" placeholder="Password" required>
+
+    <i class="fa-solid fa-eye"
+       id="togglePassword"
+       onclick="togglePassword()"></i>
+</div>
 <button onclick="login()">Login</button>
 <p>Don't have an account? <a href="/register">Register</a></p>
 </div>

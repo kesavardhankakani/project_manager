@@ -2,6 +2,8 @@
 <head>
 <title>ProjectManager - Register</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
@@ -13,7 +15,13 @@
 
 <input type="text" id="username" placeholder="Enter Username">
 <input type="email" id="email" placeholder="Enter Email">
-<input type="password" id="password" placeholder="Enter Password">
+<div class="password-container">
+    <input type="password" id="password" placeholder="Password" required>
+
+    <i class="fa-solid fa-eye"
+       id="togglePassword"
+       onclick="togglePassword()"></i>
+</div>
 
 <button onclick="register()">Register</button>
 
