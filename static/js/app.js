@@ -1,5 +1,5 @@
 console.log("ProjectManager Loaded");
-const API = "";
+const API = window.location.origin;
 
 function getToken(){
     return localStorage.getItem("token");
