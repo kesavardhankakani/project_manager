@@ -283,11 +283,9 @@ function getProjectProgress(){
 function goCreateProject(){
     location="/create_project";
 }
-
 function goDashboard(){
     location="/dashboard";
 }
-
 function goAddTask(projectid){
     location="/add_task?projectid="+projectid;
 }
@@ -308,22 +306,15 @@ window.onload=function(){
     }
 };
 function togglePassword(){
-
     const password=document.getElementById("password");
     const icon=document.getElementById("togglePassword");
-
     if(password.type==="password"){
-
         password.type="text";
-
         icon.classList.remove("fa-eye");
         icon.classList.add("fa-eye-slash");
-
     }
     else{
-
         password.type="password";
-
         icon.classList.remove("fa-eye-slash");
         icon.classList.add("fa-eye");
 
